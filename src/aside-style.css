@@ -1,0 +1,31 @@
+:root {
+  --btn-transition: ease-in 0.5s;
+}
+
+button {
+  height: 50px;
+  width: 50px;
+  border: none;
+  appearance: none;
+  background: none;
+}
+
+.faHoverColor:hover {
+  color: white;
+  transition: var(--btn-transition);
+}
+
+button.linkedin:hover {
+  background-color: #0e76a8;
+  transition: var(--btn-transition);
+}
+
+button.facebook:hover {
+  background-color: #39569c;
+  transition: var(--btn-transition);
+}
+
+button.dribbble:hover {
+  background-color: #ea4c89;
+  transition: var(--btn-transition);
+}
