@@ -7,14 +7,14 @@ import Navbar from './components/Navbar';
 // import Aside from './components/Aside';
 // import Main from './components/Main';
 import App from './App';
-import Background from './Background';
+
 
 const RouteApp = () => {
     return (
         <div className='container'>
             <Router>
                 <Navbar />
-                {/* <Background /> */}
+                
                 <Switch>
                     <Route exact path='/' component={App} />
                     <Route  path='/about' component={About} />
