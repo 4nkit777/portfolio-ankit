@@ -9,7 +9,7 @@ function App() {
   return (
     <div className='container'>
       {/* <Navbar /> */}
-      <div className='d-flex mt-3'>
+      <div className='d-flex'>
           <Aside />
           <Main />
       </div>
