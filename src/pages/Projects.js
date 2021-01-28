@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import { websites } from '../data';
 // import Thumbnail from 'react-thumbnail';
 import firstImg from '../assets/color-gen.png';
@@ -48,6 +48,16 @@ const projectData = [
 
 
 const Projects = () => {
+
+    const [url, setUrl] = useState(window.location.href);
+    console.log(url);
+
+    // const submitHandle = (e) => {
+    //     e.preventDefault();
+        
+    //     setUrl(window.location.replace(`https://${url}`));
+    // }
+
     return (
         <div className='mt-5 vh-100'>
             <div className='text-center mb-4'>
@@ -76,13 +86,14 @@ const Projects = () => {
 
                                 {/* <button className='btn btn-primary container'>Click Me</button> */}
                                 <Link to={website}>
-                                    <button className='btn btn-primary container'>Click Me</button>
+                                    <button className='btn btn-primary container' onSubmit={(e) => {
+                                        e.preventDefault();
+                                        setUrl(website);
+                                        console.log(url);
+                                    }} >
+                                        Click Me
+                                    </button>
                                 </Link>
-                                {/* <Link to={website}>
-                                    <button>Click Me</button>
-                                </Link> */}
-                                
-                                {/* <button className='btn btn-primary container' onSubmit={() => handleClick(website)}>See me live!</button> */}
                             </div>
                         </div>
                     );
