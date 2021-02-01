@@ -1,18 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 // import { websites } from '../data';
 // import Thumbnail from 'react-thumbnail';
 import firstImg from '../assets/color-gen.png';
 import secondImg from '../assets/birthday-reminder.png';
 import thirdImg from '../assets/carousel-slider 1-adjusted.png';
 import fourthImg from '../assets/to-do-list-app.png';
-import { Link } from 'react-router-dom';
-
-
-// const websites = [
-//     'https://color-generator-react-app.netlify.app/',
-//     'https://carousel-slider-react-app.netlify.app/',
-//     'https://todo-web-app-react.netlify.app/'
-// ];
+import fifthImg from '../assets/Nasa-miss-app.png';
 
 
 const projectData = [
@@ -37,43 +30,43 @@ const projectData = [
         website: 'https://carousel-slider-react-app.netlify.app/',
         technology: ['React', 'Bootstrap']
     },
-        {
+    {
         id: 4,
         image: fourthImg,
         title: 'to-do list app',
         website: 'https://todo-web-app-react.netlify.app/',
         technology: ['React', 'Bootstrap']
-    }
+    },
+    {
+        id: 5,
+        image: fifthImg,
+        title: 'NASA info app',
+        website: 'https://nasa-app-mdn.netlify.app/',
+        technology: ['React', 'Bootstrap']
+    },
+
 ];
 
 
 const Projects = () => {
 
-    const [url, setUrl] = useState(window.location.href);
-    console.log(url);
-
-    // const submitHandle = (e) => {
-    //     e.preventDefault();
-        
-    //     setUrl(window.location.replace(`https://${url}`));
-    // }
 
     return (
-        <div className='mt-5 vh-100'>
+        <div className='mt-5 vh-100 d-flex flex-column'>
             <div className='text-center mb-4'>
-                <h2>My Projects</h2>
+                <h3>My Projects</h3>
             </div>
-            <div className='d-flex justify-content-around'>
+            <div className='row gx-5'>
                 {projectData.map((item) => {
                     const { id, image, title, website, technology } = item;
                     return (
-                        <div className='card shadow d-flex' style={{ width: '16rem', height: '23rem'}} key={id} >
+                        <div className='card shadow d-flex mx-2 my-2' style={{ width: '22rem', height: '23rem'}} key={id} >
                             <div className='card-img-top h-50'>
                                 <img src={image} className='img-fluid' alt={title} />
                             </div>
                             
                             <div className='card-body bg-dark text-light ' style={{ height: '5rem'}} >
-                                <h5 className='card-title'>{title}</h5>
+                                <h6 className='card-title text-center'>{title}</h6>
                                 <div className='d-flex mb-3 justify-content-around'>
                                     {technology.map((item, index) => {
                                         return (
@@ -84,20 +77,18 @@ const Projects = () => {
                                     })}
                                 </div>
 
-                                {/* <button className='btn btn-primary container'>Click Me</button> */}
-                                <Link to={website}>
-                                    <button className='btn btn-primary container' onSubmit={(e) => {
-                                        e.preventDefault();
-                                        setUrl(website);
-                                        console.log(url);
-                                    }} >
-                                        Click Me
-                                    </button>
-                                </Link>
+                                <button className='btn btn-primary container' onClick={() => {
+                                    window.location.href = website;
+                                }}>
+                                    Show Me
+                                </button>
                             </div>
                         </div>
                     );
                 })}
+            </div>
+            <div className='text-center mt-3'>
+                <h4>Working on more projects daily...</h4>
             </div>
             
         </div>

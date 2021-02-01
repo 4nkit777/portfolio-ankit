@@ -13,14 +13,11 @@ const Main = () => {
                     <p style={{ fontWeight: '300', fontSize: '0.9rem' }} className='mt-3'>UI/UX Designer | An aspiring Web Developer</p>
                     <p className='mb-5' style={{ fontSize: '0.9rem', color: 'blueviolet', fontWeight: '600' }} >A self taught programmer</p>
                     <div className='w-75 p-1 d-flex justify-content-start'>
-                        <button className='btn btn-primary w-25 mr-2'>Contact Me</button>
-                        <button className='btn btn-primary w-25 '>Let's Chat!</button>
+                        <button className='btn btn-primary w-25 mr-2' onClick={() => window.location.href = 'mailto:ankit.sil@outlook.com'}>Contact Me</button>
+                        <button className='btn btn-primary w-25 ' onClick={() => window.location.href = 'https://www.linkedin.com/in/ankit-sil-562557164/'}>Let's Chat!</button>
                     </div>
                     
                 </div>
-                {/* <div className='col-md-9 d-flex justify-content-center align-items-center'>
-                    <img src={MainImage} alt='main-img' className='col-md-12'/>
-                </div> */}
             </div>
         </main>
     );

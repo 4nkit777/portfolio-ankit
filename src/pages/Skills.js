@@ -14,7 +14,8 @@ const skillList = [
                     <FaCss3Alt size={50} />
                     <SiJavascript size={50} />
                 </div>
-        )
+        ),
+        desc: 'Worked on Grid and Flexbox, on top of all the latest ES features of JavaScript'
     },
     { 
         id: 2,
@@ -25,7 +26,8 @@ const skillList = [
                     <SiAdobephotoshop size={50} />
                     <SiFigma size={50} />
                 </div>
-        )
+        ),
+        desc: 'Presently do all my UI design on Figma'
     },
     { 
         id: 3,
@@ -38,7 +40,8 @@ const skillList = [
                     <SiMaterialdesign size={50} />
                     <GrGatsbyjs size={50} />
                 </div>
-        )
+        ),
+        desc: 'I love React with BootStrap'
     },
     { 
         id: 4,
@@ -49,7 +52,8 @@ const skillList = [
                     <FaTrello size={50} />
                     <SiJira size={50} />
                 </div>
-        )
+        ),
+        desc: 'I have a Post-Graduate Diploma in Project Management, with extensive knowledge of Tools and Techniques.'
     },
     { 
         id: 5,
@@ -60,22 +64,27 @@ const skillList = [
                     <FaUbuntu size={50} />
                     <FcCommandLine size={50} />
                 </div>
-        )
+        ),
+        desc: 'I use Ubuntu on my rig'
     },
 ];
 
 const Skills = () => {
     return (
-        <div className='container d-flex justify-content-around mt-5 vh-100' >
-            {skillList.map((item) => {
-                const { id, title, elements } = item;
-                return (
-                    <div className='card text-center shadow ' style={{ width: '13rem', height: '10rem' }} key={id} >
-                        <p className='card-title container text-light p-2' style={{ backgroundColor: '#8f2d56'}}>{title}</p>
-                        {elements}
-                    </div>
-                );
-            })}
+        <div className='container d-flex flex-column mt-5 vh-100' >
+            <div className='row'>
+                {skillList.map((item) => {
+                    const { id, title, elements, desc } = item;
+                    return (
+                        <div className='card text-center shadow mx-2 my-2' style={{ width: '22rem', height: '16rem' }} key={id} >
+                            <p className='card-title container text-light p-2' style={{ backgroundColor: '#8f2d56'}}>{title}</p>
+                            {elements}
+                            <p className='mt-3 p-2'>{desc}</p>
+                        </div>
+                    );
+                })}
+            </div>
+
         </div>
     );
 }

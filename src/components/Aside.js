@@ -6,7 +6,7 @@ const Aside = () => {
     return (
         <div className='d-flex flex-column vh-100 col-md-2 justify-content-around'>
             <div className='d-flex flex-column'>
-                <button className='linkedin'>
+                <button className='linkedin' onClick={() => window.location.href = 'https://www.linkedin.com/in/ankit-sil-562557164/'}>
                     <FaLinkedin className='w-50 h-50 faHoverColor' />
                 </button>
                 <button className='facebook'>

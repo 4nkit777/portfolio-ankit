@@ -4,8 +4,6 @@ import Projects from './pages/Projects';
 import About from './pages/About';
 import Skills from './pages/Skills';
 import Navbar from './components/Navbar';
-// import Aside from './components/Aside';
-// import Main from './components/Main';
 import App from './App';
 
 
@@ -21,10 +19,7 @@ const RouteApp = () => {
                     <Route  path='/projects' component={Projects} />
                     <Route  path='/skills' component={Skills} />
                 </Switch>
-                {/* <div className='d-flex mt-3'>
-                    <Aside />
-                    <Main />
-                </div> */}
+
             </Router>
         </div>
 
