@@ -18,8 +18,20 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  /* background-attachment: fixed; */
 }
 
 nav {
   font-family: "Viga", sans-serif;
+}
+
+@media (max-width: 576px) {
+  body {
+    display: block;
+    background-color: whitesmoke;
+    background-image: url("./assets/phone-bg-img.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
 }

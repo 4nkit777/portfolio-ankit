@@ -2,8 +2,17 @@ p.para-1 {
   font-size: 0.9rem;
   color: darkblue;
   line-height: 1.2rem;
+
+  @media only screen and (min-width: 576px) {
+    font-size: 0.5rem;
+  }
 }
 
 p.para-2 {
   font-size: 1.1rem;
 }
+
+/* @media (min-width: 576px) {
+  .col-md-2 {
+    width: 50%; 
+} */

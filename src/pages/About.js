@@ -10,15 +10,16 @@ import '../about-style.css';
 const About = () => {
     return (
         <div className='container mt-5 vh-100'>
-            <div className='card d-flex justify-content-end position-relative border-0 shadow'>
-                <div className='position-absolute d-flex flex-column' style={{ top: '60%', left: '5%' }} >
+            <div className='card d-flex justify-content-end position-relative border-0 shadow h-25'>
+                <div className='position-absolute container' style={{ top: '60%', left: '5%' }} >
                     <p className='d-inline para-1'>
                         An Environmental Engineer <br />
                         turned a self taught Web Developer.
                     </p>
                     {/* <p className='d-inline para-2'></p> */}
                 </div>
-                <img src={aboutImg} alt='abstract-img' style={{ width: '100%', height: '30vh', opacity: '100%' }} />
+                {/* <img src={aboutImg} alt='abstract-img' style={{ width: '100%', height: '30vh', opacity: '100%' }} /> */}
+                <img src={aboutImg} alt='abstract-img' className='container-fluid h-100' />
             </div>
             <div className='text-center mt-5 d-flex flex-column align-items-center'>
                 <div className='rounded-pill shadow mb-3 d-flex justify-content-center align-items-center' style={{ width: '60px', height: '60px' }}>
