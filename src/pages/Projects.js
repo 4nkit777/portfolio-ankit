@@ -51,7 +51,7 @@ const Projects = () => {
       <div className='text-center mb-4'>
         <h3>My Projects</h3>
       </div>
-      <div className='row gx-5'>
+      <div className='row gx-5 justify-content-center'>
         {projectData.map((item) => {
           const { id, image, title, website, technology } = item;
           return (
