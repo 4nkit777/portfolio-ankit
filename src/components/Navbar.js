@@ -1,49 +1,55 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import '../nav-style.css';
-import { Collapse } from 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
-
-// import Projects from '../pages/Projects';
+import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import "../nav-style.css";
+import { navData } from "../data";
+import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {
-    const [toggle, setToggle] = useState(false);
-    // const collapseRef = useRef();
+  const [showLinks, setShowLinks] = useState(false);
+  const linksContainerRef = useRef(null);
+  const linksRef = useRef(null);
 
-    useEffect(() => {
-        // let myCollapse = collapseRef.current;
-        let myCollapse = document.getElementById('collapseTarget');
-        let bsCollapse = new Collapse(myCollapse, { toggle: false });
-        toggle ? bsCollapse.show() : bsCollapse.hide();
-    });
+  useEffect(() => {
+    const linksHeight = linksRef.current.getBoundingClientRect().height;
+    console.log(linksHeight);
+    if (showLinks) {
+      linksContainerRef.current.style.height = `${linksHeight}px`;
+    } else {
+      linksContainerRef.current.style.height = "0px";
+    }
+  }, [showLinks]);
 
-    return (
-            <nav className='navbar navbar-expand-lg navbar-light'>
-                <div className='container-fluid'>
-
-                        <div className='navbar-brand' style={{ fontWeight: '700', fontSize: '1.5rem' }}>
-                            <Link to='/' >Ankit</Link>
-                        </div>
-                        <button className='navbar-toggler' type='button' onClick={() => setToggle(toggle => !toggle)} >
-                            <span className='navbar-toggler-icon'></span>
-                        </button>
-                        <div className='collapse navbar-collapse justify-content-end' id='collapseTarget'>
-                            <ul className='navbar-nav col-md-4 justify-content-between'>
-                                <li className='nav-item active'>
-                                    <Link to='/about'>About Me</Link> 
-                                </li>
-                                <li className='nav-item'>
-                                    <Link to='/projects'>Projects</Link> 
-                                </li>
-                                <li className='nav-item'>
-                                    <Link to='/skills'>Skills</Link> 
-                                </li>
-                            </ul>
-                        </div>
-                </div>
-            </nav>
-    );
-}
+  return (
+    <nav>
+      <div className='nav-center'>
+        <div className='nav-header'>
+          <div className='navbar-brand'>
+            <Link to='/'>Ankit</Link>
+          </div>
+          <button
+            className='nav-toggle'
+            onClick={() => setShowLinks(!showLinks)}
+          >
+            <FaBars />
+          </button>
+        </div>
+        <div
+          className='links-container d-flex align-items-center'
+          ref={linksContainerRef}
+        >
+          <ul className='links' ref={linksRef}>
+            {navData.map(({ id, url, text }) => {
+              return (
+                <li key={id}>
+                  <Link to={url}>{text}</Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
 export default Navbar;

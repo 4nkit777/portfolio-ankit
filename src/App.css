@@ -1,11 +1,17 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
-
-body {
-  font-family: "Noto Sans", sans-serif;
-} */
-
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Noto+Sans:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
+
+:root {
+  --bg-color: #f8f9fa;
+  --nav-color: #e9ecef;
+  --text-color-1: #8186ff;
+  --text-color-2: #6167f3;
+  --text-color-3: #3339c7;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
 body {
   font-family: "Josefin Sans", sans-serif;
@@ -13,8 +19,8 @@ body {
 
   /* background-color: #f8edeb; */
   /* background-color: #edc4b3; */
-  background-color: whitesmoke;
-  background-image: url("./assets/background-img.png");
+  background-color: var(--bg-color);
+  background-image: url("./assets/transparent-desktop-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -23,9 +29,93 @@ body {
 
 nav {
   font-family: "Viga", sans-serif;
+  background-color: var(--nav-color);
+  box-shadow: var(--light-shadow);
 }
 
-@media (max-width: 576px) {
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.nav-toggle {
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.nav-toggle:hover {
+  color: var(--text-color-1);
+  transform: rotate(90deg);
+}
+
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.show-container {
+  height: 10rem;
+}
+
+.links a {
+  color: var(--text-color-3);
+  font-size: 1rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+
+.links a:hover {
+  background: var(--text-color-1);
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  text-transform: uppercase;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links-container {
+    height: auto !important;
+  }
+  .links {
+    display: flex;
+  }
+
+  .links a {
+    padding: 0;
+    margin: 0 1.3rem;
+  }
+}
+
+/* @media (max-width: 576px) {
   body {
     display: block;
     background-color: whitesmoke;
@@ -34,4 +124,4 @@ nav {
     background-position: center center;
     background-size: cover;
   }
-}
+} */

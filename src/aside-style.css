@@ -1,5 +1,6 @@
 :root {
   --btn-transition: ease-in 0.5s;
+  --text-color-3: #3339c7;
 }
 
 button {
@@ -11,7 +12,7 @@ button {
 }
 
 .faHoverColor:hover {
-  color: white;
+  color: var(--text-color-3);
   transition: var(--btn-transition);
 }
 
