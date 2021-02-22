@@ -1,10 +1,10 @@
 import React from "react";
-import heroImg from "../assets/hero-bg-img.png";
+// import heroImg from "../assets/hero-bg-img.png";
 import firstShowcase from "../assets/screenshot-1-frame.png";
 import secondShowcase from "../assets/screenshot-2-frame(1).png";
 import thirdShowcase from "../assets/screenshot-3-frame.png";
-import heroBlob from "../assets/hero-blob.png";
-import heroFrame from "../assets/hero-window-frame.png";
+// import heroBlob from "../assets/hero-blob.png";
+// import heroFrame from "../assets/hero-window-frame.png";
 import heroFrameTwo from "../assets/blob-img-group.png";
 import gogLogo from "../assets/gog-logo.png";
 
@@ -22,7 +22,7 @@ import gogLogo from "../assets/gog-logo.png";
 //   },
 // ];
 
-const screenshots = [firstShowcase, secondShowcase, thirdShowcase];
+// const screenshots = [firstShowcase, secondShowcase, thirdShowcase];
 
 const Projects = () => {
   return (
