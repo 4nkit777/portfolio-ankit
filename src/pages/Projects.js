@@ -1,99 +1,66 @@
 import React from "react";
-// import { websites } from '../data';
-// import Thumbnail from 'react-thumbnail';
-import firstImg from "../assets/color-gen.png";
-import secondImg from "../assets/birthday-reminder.png";
-import thirdImg from "../assets/carousel-slider 1-adjusted.png";
-import fourthImg from "../assets/to-do-list-app.png";
-import fifthImg from "../assets/Nasa-miss-app.png";
+import heroImg from "../assets/hero-bg-img.png";
+import firstShowcase from "../assets/screenshot-1-frame.png";
+import secondShowcase from "../assets/screenshot-2-frame(1).png";
+import thirdShowcase from "../assets/screenshot-3-frame.png";
+import heroBlob from "../assets/hero-blob.png";
+import heroFrame from "../assets/hero-window-frame.png";
+import heroFrameTwo from "../assets/blob-img-group.png";
+import gogLogo from "../assets/gog-logo.png";
 
-const projectData = [
-  {
-    id: 1,
-    image: firstImg,
-    title: "color generator app",
-    website: "https://color-generator-react-app.netlify.app/",
-    technology: ["React", "Bootstrap"],
-  },
-  {
-    id: 2,
-    image: secondImg,
-    title: "birthday reminder app",
-    website: "https://birthday-reminder-react-app.netlify.app/",
-    technology: ["React", "Bootstrap"],
-  },
-  {
-    id: 3,
-    image: thirdImg,
-    title: "carousel slider app",
-    website: "https://carousel-slider-react-app.netlify.app/",
-    technology: ["React", "Bootstrap"],
-  },
-  {
-    id: 4,
-    image: fourthImg,
-    title: "to-do list app",
-    website: "https://todo-web-app-react.netlify.app/",
-    technology: ["React", "Bootstrap"],
-  },
-  {
-    id: 5,
-    image: fifthImg,
-    title: "NASA info app",
-    website: "https://nasa-app-mdn.netlify.app/",
-    technology: ["React", "Bootstrap"],
-  },
-];
+// const heroContent = [
+//   {
+//     id: 1,
+//     logo: gogLogo,
+//     headingOne: "Game of Go App  Experience",
+//     headingTwo: "Perfecting the game for the GO app redesign",
+//     textOne: "I am part of an ambitious project to redesign the Game of GO",
+//     textTwo:
+//       "app experience for one of the fastest growing start-up in the history",
+//     blobImage: heroBlob,
+//     frameImage: heroFrame,
+//   },
+// ];
+
+const screenshots = [firstShowcase, secondShowcase, thirdShowcase];
 
 const Projects = () => {
   return (
-    <div className='mt-5 vh-100 d-flex flex-column container'>
-      <div className='text-center mb-4'>
-        <h3>My Projects</h3>
-      </div>
-      <div className='row gx-5 justify-content-center'>
-        {projectData.map((item) => {
-          const { id, image, title, website, technology } = item;
-          return (
-            <div
-              className='card shadow d-flex mx-2 my-2'
-              style={{ width: "22rem", height: "23rem" }}
-              key={id}
-            >
-              <div className='card-img-top h-50'>
-                <img src={image} className='img-fluid' alt={title} />
-              </div>
-
-              <div
-                className='card-body bg-dark text-light '
-                style={{ height: "5rem" }}
-              >
-                <h6 className='card-title text-center'>{title}</h6>
-                <div className='d-flex mb-3 justify-content-around'>
-                  {technology.map((item, index) => {
-                    return (
-                      <div className='btn btn-outline-primary' key={index}>
-                        {item}
-                      </div>
-                    );
-                  })}
-                </div>
-
-                <button
-                  className='btn btn-primary container'
-                  onClick={() => {
-                    window.location.href = website;
-                  }}
-                >
-                  Show Me
-                </button>
-              </div>
+    <div className='container mt-3'>
+      <div className='hero-container'>
+        <div className='hero-items-container'>
+          <div className='logo-container d-flex'>
+            <img src={gogLogo} alt='gogLogo' className='gog-logo' />
+            <div className='d-flex flex-column ml-3'>
+              <h5>Game of Go App Experience</h5>
+              <h6>Perfecting the game for the GO app redesign</h6>
             </div>
-          );
-        })}
+          </div>
+
+          <p className='hero-para-text'>
+            I am part of an ambitious project to redesign the Game of GO <br />
+            app experience for one of the fastest growing start-up in the
+            history
+          </p>
+          <button className='btn btn-dark w-50'>Learn More</button>
+        </div>
+        <div className='phone-frame'>
+          <img src={heroFrameTwo} alt='blobImage' className='blob-image' />
+        </div>
       </div>
-      <div className='text-center mt-3'>
-        <h4>Working on more projects daily...</h4>
+      <div className='mt-5 d-flex flex-column align-items-center'>
+        <p className='btn btn-dark w-25'>What I did</p>
+        <div className='showcase-container mt-5'>
+          <div className='mb-3'>
+            <img src={firstShowcase} alt='first ' />
+          </div>
+          <div className='mb-3'>
+            <img src={secondShowcase} alt='second ' />
+          </div>
+          <div className='mb-3'>
+            <img src={thirdShowcase} alt='third ' />
+          </div>
+        </div>
       </div>
     </div>
   );
