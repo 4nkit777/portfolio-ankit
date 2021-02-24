@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Navbar from "./components/Navbar";
 import App from "./App";
+import AboutGame from "./pages/subpages/AboutGame";
 
 const RouteApp = () => {
   return (
@@ -18,6 +19,7 @@ const RouteApp = () => {
           <Route path='/projects' component={Projects} />
           <Route path='/skills' component={Skills} />
         </Switch>
+        <Route exact path='/aboutgame' component={AboutGame} />
       </Router>
     </div>
   );

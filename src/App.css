@@ -9,6 +9,10 @@
   --text-color-1: #8186ff;
   --text-color-2: #6167f3;
   --text-color-3: #3339c7;
+  --bg-color-1: #e9edc9;
+  --bg-color-2: #ffcdb2;
+  --bg-color-3: #6d6875;
+  --bg-color-4: #f1faee;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -169,6 +173,33 @@ a {
   width: 100%;
 }
 
+/* About Game */
+.before-frame,
+.after-frame {
+  width: 50%;
+}
+
+.hero-text {
+  background-color: var(--text-color-2);
+}
+
+.avatar-img {
+  width: 10%;
+  height: 10%;
+}
+
+.game-screen-container {
+  background-color: var(--bg-color-2);
+}
+
+.design-thinking-container {
+  background-color: var(--bg-color-4);
+}
+
+.work-container {
+  background-color: var(--text-color-2);
+}
+
 @media screen and (min-width: 800px) {
   .nav-center {
     max-width: 1170px;
@@ -246,6 +277,11 @@ a {
     width: 100%;
     height: 100%;
   } */
+
+  .avatar-img {
+    width: 20%;
+    height: 20%;
+  }
   .showcase-container {
     display: flex;
     flex-direction: column;

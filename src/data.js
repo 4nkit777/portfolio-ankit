@@ -5,6 +5,9 @@
 // ];
 import React from "react";
 import { FaDribbbleSquare, FaLinkedin, FaFacebook } from "react-icons/fa";
+import firstShowcase from "./assets/screenshot-1-frame.png";
+import secondShowcase from "./assets/screenshot-2-frame(1).png";
+import thirdShowcase from "./assets/screenshot-3-frame.png";
 
 export const navData = [
   {
@@ -22,6 +25,11 @@ export const navData = [
     url: "/skills",
     text: "skills",
   },
+  // {
+  //   id: 4,
+  //   url: "/aboutgame",
+  //   text: "game",
+  // },
 ];
 
 export const socialIcons = [
@@ -45,5 +53,25 @@ export const socialIcons = [
     url: "https://www.dribbble.com/",
     classDeno: "w-50 h-50 faHoverColor",
     icon: <FaDribbbleSquare />,
+  },
+];
+
+// portfolio screenshots data
+
+export const screenshots = [
+  {
+    id: 1,
+    imgShot: firstShowcase,
+    altText: "first screenshot",
+  },
+  {
+    id: 2,
+    imgShot: secondShowcase,
+    altText: "second screenshot",
+  },
+  {
+    id: 3,
+    imgShot: thirdShowcase,
+    altText: "third screenshot",
   },
 ];

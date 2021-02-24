@@ -1,28 +1,8 @@
 import React from "react";
-// import heroImg from "../assets/hero-bg-img.png";
-import firstShowcase from "../assets/screenshot-1-frame.png";
-import secondShowcase from "../assets/screenshot-2-frame(1).png";
-import thirdShowcase from "../assets/screenshot-3-frame.png";
-// import heroBlob from "../assets/hero-blob.png";
-// import heroFrame from "../assets/hero-window-frame.png";
+import { screenshots } from "../data";
 import heroFrameTwo from "../assets/blob-img-group.png";
 import gogLogo from "../assets/gog-logo.png";
-
-// const heroContent = [
-//   {
-//     id: 1,
-//     logo: gogLogo,
-//     headingOne: "Game of Go App  Experience",
-//     headingTwo: "Perfecting the game for the GO app redesign",
-//     textOne: "I am part of an ambitious project to redesign the Game of GO",
-//     textTwo:
-//       "app experience for one of the fastest growing start-up in the history",
-//     blobImage: heroBlob,
-//     frameImage: heroFrame,
-//   },
-// ];
-
-// const screenshots = [firstShowcase, secondShowcase, thirdShowcase];
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
@@ -42,7 +22,9 @@ const Projects = () => {
             app experience for one of the fastest growing start-up in the
             history
           </p>
-          <button className='btn btn-dark w-50'>Learn More</button>
+          <button className='btn btn-dark w-50'>
+            <Link to='/aboutgame'>Learn More</Link>
+          </button>
         </div>
         <div className='phone-frame'>
           <img src={heroFrameTwo} alt='blobImage' className='blob-image' />
@@ -51,15 +33,13 @@ const Projects = () => {
       <div className='mt-5 d-flex flex-column align-items-center'>
         <p className='btn btn-dark w-25'>What I did</p>
         <div className='showcase-container mt-5'>
-          <div className='mb-3'>
-            <img src={firstShowcase} alt='first ' />
-          </div>
-          <div className='mb-3'>
-            <img src={secondShowcase} alt='second ' />
-          </div>
-          <div className='mb-3'>
-            <img src={thirdShowcase} alt='third ' />
-          </div>
+          {screenshots.map(({ id, imgShot, altText }) => {
+            return (
+              <div className='mb-3' key={id}>
+                <img src={imgShot} alt={altText} />
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

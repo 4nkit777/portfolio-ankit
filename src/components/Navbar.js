@@ -20,8 +20,8 @@ const Navbar = () => {
   }, [showLinks]);
 
   return (
-    <nav>
-      <div className='nav-center'>
+    <nav className='sticky-top'>
+      <div className='nav-center '>
         <div className='nav-header'>
           <div className='navbar-brand'>
             <Link to='/'>Ankit</Link>
