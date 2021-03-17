@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 // import AbstractImg from '../assets/abstract-about.jpg';
 // import aboutImgBg from '../assets/about-bg-img.png';
 // import aboutImgBgBlue from '../assets/about-bg-img-blue.png';
 // import aboutImg from '../assets/about-img.png';
-import aboutImg from "../assets/abt-img-new.png";
+// import aboutImg from "../assets/abt-img-new.png";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import { AiOutlineLine } from "react-icons/ai";
 import "../about-style.css";
