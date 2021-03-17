@@ -36,7 +36,7 @@ export const socialIcons = [
   {
     id: 1,
     text: "linkedIn",
-    url: "https://www.linkedin.com/in/ankit-sil-562557164/",
+    url: "https://www.linkedin.com/in/ankit-sil",
     classDeno: "w-50 h-50 faHoverColor",
     icon: <FaLinkedin />,
   },
@@ -50,7 +50,7 @@ export const socialIcons = [
   {
     id: 3,
     text: "dribbble",
-    url: "https://www.dribbble.com/",
+    url: "https://dribbble.com/AnkitSil",
     classDeno: "w-50 h-50 faHoverColor",
     icon: <FaDribbbleSquare />,
   },

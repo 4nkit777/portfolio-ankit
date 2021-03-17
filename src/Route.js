@@ -1,18 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+// pages
 import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
-import Navbar from "./components/Navbar";
 import App from "./App";
 import AboutGame from "./pages/subpages/AboutGame";
+// import Error from "./pages/Error";
 
 const RouteApp = () => {
   return (
-    <div className=''>
+    <div>
       <Router>
         <Navbar />
-
         <Switch>
           <Route exact path='/' component={App} />
           <Route path='/about' component={About} />

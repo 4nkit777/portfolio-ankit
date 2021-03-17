@@ -12,8 +12,8 @@ const Projects = () => {
           <div className='logo-container d-flex'>
             <img src={gogLogo} alt='gogLogo' className='gog-logo' />
             <div className='d-flex flex-column ml-3'>
-              <h5>Game of Go App Experience</h5>
-              <h6>Perfecting the game for the GO app redesign</h6>
+              <h4>Game of Go App Experience</h4>
+              <h5>Perfecting the game for the GO app redesign</h5>
             </div>
           </div>
 
@@ -41,6 +41,9 @@ const Projects = () => {
             );
           })}
         </div>
+        <p className='bg-dark text-light'>
+          High fidelity GO app mockups for iOS
+        </p>
       </div>
     </div>
   );

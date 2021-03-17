@@ -15,17 +15,19 @@ const Main = () => {
           <p
             className='mb-5'
             style={{
-              fontSize: "0.9rem",
+              fontSize: "0.8rem",
               color: "#091B59",
               fontWeight: "600",
             }}
           >
-            A self taught programmer
+            He's a UI/UX Designer based in Toronto, ON. An autodidact, he's
+            constantly improving user experiences by applying Design Thinking
+            Principles on to his designs.
           </p>
           <div className='container'>
-            <div className='row justify-content-around'>
+            <div className='row justify-content-start'>
               <button
-                className='btn col mr-2 main-btn'
+                className='btn col-md-3 mr-2 main-btn'
                 onClick={() =>
                   (window.location.href = "mailto:ankit.sil@outlook.com")
                 }
@@ -33,7 +35,7 @@ const Main = () => {
                 Contact Me
               </button>
               <button
-                className='btn col main-btn'
+                className='btn col-md-3 main-btn'
                 onClick={() =>
                   (window.location.href =
                     "https://www.linkedin.com/in/ankit-sil-562557164/")

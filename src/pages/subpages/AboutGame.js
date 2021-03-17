@@ -75,7 +75,9 @@ export default function AboutGame() {
       <div className='text-center mt-5 work-container rounded shadow'>
         <h4 className='pt-3 text-light'>{workDid.heading}</h4>
         <div className=''>
-          <h6 className='my-3'>{workDid.onBoardingShots.subText}</h6>
+          <h6 className='my-3 text-light bg-dark p-3'>
+            {workDid.onBoardingShots.subText}
+          </h6>
           <img
             src={workDid.onBoardingShots.first}
             alt='first shot'

@@ -13,6 +13,8 @@
   --bg-color-2: #ffcdb2;
   --bg-color-3: #6d6875;
   --bg-color-4: #f1faee;
+  --para-color-1: #738580;
+  --heading4-color: #474440;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -41,12 +43,32 @@ h2 {
   font-size: 24px;
 }
 
+h3 {
+  font-size: 22px;
+  letter-spacing: -3px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.2rem;
+  letter-spacing: -3.2px;
+  color: var(--heading4-color);
+}
+
 h5 {
   font-size: 1rem;
+  letter-spacing: -2px;
 }
 
 h6 {
   font-size: 0.8rem;
+  letter-spacing: -2px;
+}
+
+p {
+  color: var(--para-color-1);
+  letter-spacing: -1.5px;
+  line-height: 25px;
 }
 
 .main-btn {
@@ -93,17 +115,20 @@ nav {
 .links a {
   color: var(--text-color-3);
   font-size: 1rem;
+  letter-spacing: -0.5px;
   display: block;
   padding: 0.5rem 1rem;
   transition: var(--transition);
 }
 
 .links a:hover {
-  background: var(--text-color-1);
+  color: var(--bg-color-3);
+  transition: var(--transition);
 }
 
 ul {
   padding: 0;
+  margin: 0;
 }
 
 li {
@@ -113,6 +138,37 @@ li {
 
 a {
   text-decoration: none;
+}
+
+a:link {
+  color: none;
+  background-color: none;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--heading4-color);
+  /* background-color: var(--text-color-1); */
+  text-decoration: underline;
+  transition: var(--transition);
+}
+
+button > a:link {
+  color: none;
+  background-color: none;
+  text-decoration: none;
+}
+
+button > a:hover {
+  color: none;
+  background-color: none;
+  text-decoration: none;
+}
+
+/* Navbar */
+
+.nav-list-items {
+  font-size: 24px;
 }
 
 /* Hero Area */
@@ -159,7 +215,8 @@ a {
 }
 
 .hero-para-text {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--ehad);
 }
 
 .phone-frame {
@@ -172,6 +229,69 @@ a {
   justify-content: space-between;
   width: 100%;
 }
+
+/* About Me */
+
+.about-container {
+  background-color: #274472;
+}
+
+.cube-container {
+  height: 305px;
+}
+
+.ellipse {
+  position: relative;
+  left: 300px;
+  z-index: 1;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.rotate {
+  animation: rotation 10s;
+}
+
+.linear {
+  animation-timing-function: linear;
+}
+
+.infinite {
+  animation-iteration-count: infinite;
+}
+
+.cube-one {
+  right: 200px;
+  z-index: 10;
+}
+
+.cube-two {
+  bottom: 200px;
+  left: 260px;
+  z-index: 10;
+}
+
+/* .cube-two:hover {
+  
+} */
+
+.cube-three {
+  bottom: 180px;
+  left: 200px;
+  z-index: 10;
+}
+
+/* .quote-container {
+  background-color: white;
+  opacity: 0.1;
+} */
 
 /* About Game */
 .before-frame,
@@ -288,5 +408,25 @@ a {
     align-items: center;
     justify-content: space-between;
     height: 100%;
+  }
+
+  /* About Page */
+  .cube-container {
+  }
+
+  .ellipse,
+  .cube-two,
+  .cube-three {
+    visibility: hidden;
+  }
+
+  .cube-one {
+    bottom: 120px !important;
+    left: -10px;
+  }
+
+  .info-container {
+    display: flex;
+    flex-flow: column;
   }
 }
