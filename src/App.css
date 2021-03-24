@@ -203,6 +203,13 @@ button > a:hover {
   width: 10rem;
 }
 
+.in-dev-btn {
+  /* custom button */
+  border-width: 2.5px;
+  border-color: black;
+  width: 14rem;
+}
+
 .hero-container {
   display: flex;
   flex-direction: row;
@@ -246,6 +253,21 @@ button > a:hover {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+
+.newshots-container {
+  background-color: var(--bg-color-1);
+  max-height: 45vh;
+}
+
+.newshots-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.newshots-app {
+  width: 80%;
+  height: 100%;
 }
 
 /* About Me */
@@ -444,6 +466,21 @@ button > a:hover {
   }
 
   .phone-frame {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+
+  .newshots-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
+  }
+
+  .newshots-frame {
     visibility: hidden;
     width: 0;
     height: 0;

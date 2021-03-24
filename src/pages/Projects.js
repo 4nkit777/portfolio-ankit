@@ -1,8 +1,10 @@
 import React from "react";
-import { screenshots } from "../data";
+// import { screenshots } from "../data";
 import heroFrameTwo from "../assets/blob-img-group.png";
 import gogLogo from "../assets/gog-logo.png";
 import { Link } from "react-router-dom";
+import newshotsIcon from "../assets/news-icon.png";
+import newshotsApp from "../assets/newshots-app.png";
 
 const Projects = () => {
   return (
@@ -30,7 +32,31 @@ const Projects = () => {
           <img src={heroFrameTwo} alt='blobImage' className='blob-image' />
         </div>
       </div>
-      <div className='mt-5 d-flex flex-column align-items-center'>
+      <div className='card mt-3 d-flex flex-row newshots-container p-3 justify-content-center'>
+        <div className='d-flex flex-column'>
+          <div className='logo-container d-flex'>
+            <img src={newshotsIcon} alt='news icon' className='newshots-icon' />
+            <div className='d-flex flex-column ml-3'>
+              <h4>NewShots Web App</h4>
+              <h5>Designing and developing the ultimate news experience </h5>
+            </div>
+          </div>
+
+          <p className='hero-para-text'>
+            Juggling multiple priorities, I am also heavily investing my time in
+            developing skills <br />
+            by building a news aggregator app. It's still in development and
+            will be ready soon.
+          </p>
+          <button className='btn btn-light rounded in-dev-btn p-0'>
+            <Link to='/aboutgame'>In development</Link>
+          </button>
+        </div>
+        <div className='text-center newshots-frame'>
+          <img src={newshotsApp} alt='blobImage' className='newshots-app' />
+        </div>
+      </div>
+      {/* <div className='mt-5 d-flex flex-column align-items-center'>
         <p className='btn btn-dark w-25'>What I did</p>
         <div className='showcase-container mt-5'>
           {screenshots.map(({ id, imgShot, altText }) => {
@@ -44,7 +70,7 @@ const Projects = () => {
         <p className='bg-dark text-light'>
           High fidelity GO app mockups for iOS
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };
