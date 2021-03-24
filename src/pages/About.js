@@ -30,7 +30,7 @@ const About = () => {
       <div className='card d-flex flex-row mt-5 about-container shadow'>
         <p className='p-3 text-light'>
           An Environmental Engineer <br />
-          turned a self taught Web Desginer.
+          turned a self taught Web Designer
         </p>
         <div className='cube-container'>
           {/* <div id='animated-logo'></div> */}
@@ -52,7 +52,7 @@ const About = () => {
           />
         </div>
       </div>
-      <div className='d-flex flex-column my-5 shadow rounded'>
+      <div className='d-flex flex-column my-5 card'>
         {/* <img src={myImage} alt='author' className='rounded' /> */}
         <div className='p-3'>
           <div className=''>

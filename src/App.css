@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Noto+Sans:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap");
 
 :root {
   --bg-color: #f8f9fa;
@@ -15,7 +13,7 @@
   --bg-color-4: #f1faee;
   --para-color-1: #738580;
   --heading4-color: #474440;
-  --transition: all 0.3s linear;
+  --transition: all 0.2s linear;
   --spacing: 0.1rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -25,22 +23,14 @@
 }
 
 body {
-  /* font-family: "Josefin Sans", sans-serif;
-  font-family: "Noto Sans", sans-serif; */
   font-family: "Lexend Mega", sans-serif;
-
-  /* background-color: #f8edeb; */
-  /* background-color: #edc4b3; */
-  /* background-color: var(--bg-color);
-  background-image: url("./assets/transparent-desktop-bg.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
-  /* background-attachment: fixed; */
 }
+
+/* typography */
 
 h2 {
   font-size: 24px;
+  letter-spacing: -3px;
 }
 
 h3 {
@@ -61,8 +51,9 @@ h5 {
 }
 
 h6 {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   letter-spacing: -2px;
+  line-height: 20px;
 }
 
 p {
@@ -77,10 +68,18 @@ p {
   color: white;
 }
 
+/* Navigation attributes */
+
 nav {
-  font-family: "Viga", sans-serif;
-  background-color: var(--nav-color);
-  box-shadow: var(--nav-shadow);
+  font-family: "Blinker", sans-serif;
+  color: black;
+}
+
+.brand-name {
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 2px;
+  color: black;
 }
 
 .nav-header {
@@ -114,8 +113,9 @@ nav {
 
 .links a {
   color: var(--text-color-3);
-  font-size: 1rem;
-  letter-spacing: -0.5px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
   display: block;
   padding: 0.5rem 1rem;
   transition: var(--transition);
@@ -132,12 +132,14 @@ ul {
 }
 
 li {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   list-style-type: none;
 }
 
 a {
   text-decoration: none;
+  color: black;
+  font-weight: 800;
 }
 
 a:link {
@@ -165,6 +167,14 @@ button > a:hover {
   text-decoration: none;
 }
 
+/* Loading Spinner */
+
+.loading-spinner {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+}
+
 /* Navbar */
 
 .nav-list-items {
@@ -184,13 +194,21 @@ button > a:hover {
   width: 15%;
 } */
 
+/* Projects Page */
+
+.learn-more-btn {
+  /* custom button */
+  border-width: 2.5px;
+  border-color: black;
+  width: 10rem;
+}
+
 .hero-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   background-color: var(--text-color-1);
 
-  border-radius: 20px;
   box-shadow: var(--light-shadow);
 }
 
@@ -288,15 +306,21 @@ button > a:hover {
   z-index: 10;
 }
 
-/* .quote-container {
-  background-color: white;
-  opacity: 0.1;
-} */
-
 /* About Game */
+
+.image-container {
+  height: 500px;
+  width: 250px;
+}
+
 .before-frame,
 .after-frame {
-  width: 50%;
+  width: 30%;
+  max-height: 50%;
+}
+
+.list-item {
+  list-style-type: disc;
 }
 
 .hero-text {
@@ -360,6 +384,35 @@ button > a:hover {
 } */
 
 @media (max-width: 576px) {
+  /* Mobile Typography  */
+  h2 {
+    font-size: 22px;
+    letter-spacing: -3px;
+  }
+
+  h3 {
+    font-size: 18px;
+    letter-spacing: -3px;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 1rem;
+    letter-spacing: -3.2px;
+    color: var(--heading4-color);
+  }
+
+  h5 {
+    font-size: 0.9rem;
+    letter-spacing: -2px;
+  }
+
+  h6 {
+    font-size: 0.8rem;
+    letter-spacing: -2px;
+    line-height: 20px;
+  }
+
   .main-btn {
     font-size: 12px;
   }
@@ -367,19 +420,27 @@ button > a:hover {
     font-size: 12px;
   }
 
+  .main-screen-btn-container {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
   .hero-container {
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0;
-    height: 70vh;
+    height: 50vh;
   }
 
   .hero-items-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 40px;
+    align-items: center;
+    padding: 20px;
   }
 
   .phone-frame {
@@ -398,6 +459,11 @@ button > a:hover {
     height: 100%;
   } */
 
+  .prod-main-section-container {
+    display: flex;
+    flex-direction: column;
+  }
+
   .avatar-img {
     width: 20%;
     height: 20%;
@@ -411,8 +477,8 @@ button > a:hover {
   }
 
   /* About Page */
-  .cube-container {
-  }
+  /* .cube-container {
+  } */
 
   .ellipse,
   .cube-two,

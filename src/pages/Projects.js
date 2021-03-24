@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Projects = () => {
   return (
     <div className='container mt-3'>
-      <div className='hero-container'>
+      <div className='hero-container card'>
         <div className='hero-items-container'>
           <div className='logo-container d-flex'>
             <img src={gogLogo} alt='gogLogo' className='gog-logo' />
@@ -22,7 +22,7 @@ const Projects = () => {
             app experience for one of the fastest growing start-up in the
             history
           </p>
-          <button className='btn btn-dark w-50'>
+          <button className='btn btn-light rounded learn-more-btn w-50 p-0'>
             <Link to='/aboutgame'>Learn More</Link>
           </button>
         </div>

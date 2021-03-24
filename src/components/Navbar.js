@@ -20,11 +20,13 @@ const Navbar = () => {
   }, [showLinks]);
 
   return (
-    <nav className='sticky-top'>
+    <nav className='sticky-top border-bottom bg-light'>
       <div className='nav-center '>
         <div className='nav-header'>
           <div className='navbar-brand'>
-            <Link to='/'>Ankit</Link>
+            <Link to='/' className='brand-name'>
+              Ankit
+            </Link>
           </div>
           <button
             className='nav-toggle'
@@ -40,8 +42,10 @@ const Navbar = () => {
           <ul className='links' ref={linksRef}>
             {navData.map(({ id, url, text }) => {
               return (
-                <li key={id}>
-                  <Link to={url}>{text}</Link>
+                <li key={id} style={{ textTransform: "uppercase" }}>
+                  <Link to={url} onClick={() => setShowLinks(!showLinks)}>
+                    {text}
+                  </Link>
                 </li>
               );
             })}
