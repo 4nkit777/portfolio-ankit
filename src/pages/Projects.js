@@ -6,6 +6,13 @@ import { Link } from "react-router-dom";
 import newshotsIcon from "../assets/news-icon.png";
 import newshotsApp from "../assets/newshots-app.png";
 
+// import nasaBg from '../assets/nasa-app-shot.png';
+// import moonIcon from '../assets/moon-icon.png';
+// import asteroidOne from '../assets/asteroid-1.png';
+// import asteroidTwo from '../assets/asteroid-icon.png';
+// import rocketIcon from '../assets/rocket-icon.png';
+import nasaBg from "../assets/nasa-shot.png";
+
 const Projects = () => {
   return (
     <div className='container mt-3'>
@@ -49,13 +56,51 @@ const Projects = () => {
             will be ready soon.
           </p>
           <button className='btn btn-light rounded in-dev-btn p-0'>
-            <Link to='/aboutgame'>In development</Link>
+            <Link to=''>In development</Link>
           </button>
         </div>
         <div className='text-center newshots-frame'>
           <img src={newshotsApp} alt='blobImage' className='newshots-app' />
         </div>
       </div>
+      <div className='text-center'>
+        <p className='btn btn-dark w-50 mt-5'>Side Projects</p>
+      </div>
+      <div className='card mt-3 d-flex flex-row nasa-shots-container mb-3 p-3 justify-content-center'>
+        <div className='d-flex flex-column'>
+          <div className='logo-container d-flex'>
+            {/* <img src={newshotsIcon} alt='news icon' className='newshots-icon' /> */}
+            <div className='d-flex flex-column'>
+              <h4 className='text-light'>Asteroid Tracker Web App</h4>
+              <h5 className='text-light'>
+                Tracking potentially hazardous space objects that threaten our
+                existance!
+              </h5>
+            </div>
+          </div>
+
+          <p className='hero-para-text'>
+            This mini app is built with React, which fetches data from NASA's
+            open API!
+            <br />
+            Don't miss the shooting stars!!!
+          </p>
+          <div className=''>
+            <button
+              className='btn btn-light rounded in-dev-btn p-0'
+              onClick={() =>
+                (window.location.href = "https://nasa-app-mdn.netlify.app/")
+              }
+            >
+              Check it out!
+            </button>
+          </div>
+        </div>
+        <div className='text-center newshots-frame'>
+          <img src={nasaBg} alt='blobImage' className='newshots-app' />
+        </div>
+      </div>
+
       {/* <div className='mt-5 d-flex flex-column align-items-center'>
         <p className='btn btn-dark w-25'>What I did</p>
         <div className='showcase-container mt-5'>
