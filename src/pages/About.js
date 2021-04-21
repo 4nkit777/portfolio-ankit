@@ -1,30 +1,17 @@
 import React from "react";
-// import AbstractImg from '../assets/abstract-about.jpg';
-// import aboutImgBg from '../assets/about-bg-img.png';
-// import aboutImgBgBlue from '../assets/about-bg-img-blue.png';
-// import aboutImg from '../assets/about-img.png';
-// import aboutImg from "../assets/abt-img-new.png";
+
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import { AiOutlineLine } from "react-icons/ai";
 import "../about-style.css";
 import ellipse from "../assets/about-me-ellipse.svg";
 import cubeOne from "../assets/about-me-cube-one.svg";
-// import cubeTwo from "../assets/about-me-cube-two.svg";
 import cubeTwo from "../assets/3d-cube-comp.png";
 import cubeThree from "../assets/about-me-cube-three.svg";
 import myImage from "../assets/my_image.jpg";
 
-// import lottie from "lottie-web";
-// import logoAnimation from "../animations/53541-flag-animation.json";
+import ReactPlayer from "react-player";
 
 const About = () => {
-  // useEffect(() => {
-  //   lottie.loadAnimation({
-  //     container: document.querySelector("#animated-logo"),
-  //     animationData: logoAnimation,
-  //   });
-  // }, []);
-
   return (
     <div className='container'>
       <div className='card d-flex flex-row mt-5 about-container shadow'>
@@ -33,7 +20,6 @@ const About = () => {
           turned a self taught Web Designer
         </p>
         <div className='cube-container'>
-          {/* <div id='animated-logo'></div> */}
           <img src={ellipse} alt='ellipse' className=' ellipse' />
           <img
             src={cubeOne}
@@ -53,7 +39,6 @@ const About = () => {
         </div>
       </div>
       <div className='d-flex flex-column my-5 card'>
-        {/* <img src={myImage} alt='author' className='rounded' /> */}
         <div className='p-3'>
           <div className=''>
             <FaQuoteLeft />
@@ -72,49 +57,63 @@ const About = () => {
         <div className='d-flex mt-5 info-container'>
           <div className='col-md-6'>
             <h3>Designer full-time, photographer part-time</h3>
-            <p>
+            <h6 className='mt-4'>
               I am passionate about designs. As a kid, I used to draw sketches
-              but left it in the middle. After years of exploration, I have
-              realized that I always had that inclination towards design. Now I
-              design for people, for users and I learnt it all by myself.
-            </p>
+              and had an artistic brain. But as years had gone by, I lost my
+              ability and interest in drawing. Since then, I have kind of
+              rekindled my interest in designing. I try to see real world
+              objects in a different perspective, always trying to know how an
+              element came into existence, what was the logic behind the design
+              or is there any better way to improve the design?
+              <br />
+              <br />- Ankit :)
+            </h6>
+            <div>
+              <button
+                className='container btn btn-light rounded border border-dark'
+                onClick={() =>
+                  (window.location.href = "mailto:ankit.sil@outlook.com")
+                }
+              >
+                Let's Connect
+              </button>
+            </div>
           </div>
-          <div className='col-md-6 mb-3'>
+          <div className='col-md-6 mt-3 mb-3'>
             <img src={myImage} alt='pic' className='container-fluid' />
+          </div>
+        </div>
+      </div>
+      <div className='container mt-3 card p-3'>
+        <div className='text-center mb-5'>
+          <h2>Here are some things that inspires me.</h2>
+        </div>
+        <div className='d-flex justify-content-between inspire-container mw-100'>
+          <div className='col-md-4'>
+            <ReactPlayer
+              url='https://www.youtube.com/watch?v=vN4U5FqrOdQ'
+              width='100%'
+              height='100%'
+            />
+          </div>
+          <div className='col-md-4'>
+            <ReactPlayer
+              url='https://wwz.youtube.com/watch?v=hBATY17DdIo&list=WL&index=11'
+              width='100%'
+              height='100%'
+            />
+          </div>
+          <div className='col-md-4'>
+            <ReactPlayer
+              url='https://www.youtube.com/watch?v=7sxpKhIbr0E'
+              width='100%'
+              height='100%'
+            />
           </div>
         </div>
       </div>
     </div>
   );
 };
-
-// const About = () => {
-//     return (
-//         <div className='container mt-5 vh-100'>
-//             <div className='card d-flex justify-content-end position-relative border-0 shadow h-25'>
-//                 <div className='position-absolute container' style={{ top: '60%', left: '5%' }} >
-//                     <p className='d-inline para-1'>
-//                         An Environmental Engineer <br />
-//                         turned a self taught Web Developer.
-//                     </p>
-//                     {/* <p className='d-inline para-2'></p> */}
-//                 </div>
-//                 {/* <img src={aboutImg} alt='abstract-img' style={{ width: '100%', height: '30vh', opacity: '100%' }} /> */}
-//                 <img src={aboutImg} alt='abstract-img' className='container-fluid h-100' />
-//             </div>
-//             <div className='text-center mt-5 d-flex flex-column align-items-center'>
-//                 <div className='rounded-pill shadow mb-3 d-flex justify-content-center align-items-center' style={{ width: '60px', height: '60px' }}>
-//                     <FaQuoteLeft size={30} />
-//                 </div>
-
-//                 <p className='para-2'>
-//                     I have been teaching myself on how to design the web. Currently playing with, <br />
-//                     <span className='text-danger'>React.js</span> and <span className='text-warning'>Adobe After Effects</span>. I'm passionate about this field and hope to master <br />
-//                     and become a full-fledged Full Stack Developer!
-//                 </p>
-//             </div>
-//         </div>
-//     );
-// }
 
 export default About;

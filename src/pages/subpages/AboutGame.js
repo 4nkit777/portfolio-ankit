@@ -10,106 +10,34 @@ import avAtari from "../../assets/avatari-game-ui.png";
 import colorTheme from "../../assets/color-theme.png";
 import iconImg from "../../assets/iconography-image.png";
 
-// const heroText = {
-//   avatarImg: avatar,
-//   heading: "Perfecting the GO Game",
-//   subText: "I am the lead UI/UX Designer at Game of Go",
-// };
-
-// const designThinking = {
-//   heading: "Design Thinking",
-//   subTextOne:
-//     "In just 6 months, Game of GO app took this ancient art form onto a whole new level in the western world",
-//   subTextTwo:
-//     "The GO app -- designed in 2020, struggled to scale alongside the hyper-growth of the company. Just a team of three, trying to take on the heavywights of the online GO.",
-// };
-
-// const workDid = {
-//   heading: "My Work",
-//   onBoardingShots: {
-//     subText: "Designed on-boarding sequence on Figma",
-//     first: onBoardingFirst,
-//     second: onBoardingSecond,
-//   },
-//   instagramShots: {
-//     subText: "Designed instagram posts using Figma",
-//     instaShot: instaSequence,
-//   },
-// };
-
-// export default function AboutGame() {
-//   return (
-//     <div className='container'>
-//       <div className='mt-3 text-center p-3 hero-text text-light rounded shadow'>
-//         <img src={heroText.avatarImg} alt='avatar' className='avatar-img' />
-//         <h4>{heroText.heading}</h4>
-//         <h6>{heroText.subText}</h6>
-//       </div>
-//       <div className='text-center game-screen-container rounded mt-3 shadow'>
-//         <img
-//           src={gameScreenFrame}
-//           alt='game screen frame'
-//           className='m-3 container w-50 h-50'
-//         />
-//         <p>Game of GO app</p>
-//       </div>
-//       <div className='design-thinking-container text-dark rounded mt-3 p-5 shadow'>
-//         <h4>{designThinking.heading}</h4>
-//         <h6>{designThinking.subTextOne}</h6>
-//         <h6 className='mb-5'>{designThinking.subTextTwo}</h6>
-//         <div className='d-flex'>
-//           <img
-//             src={beforeFrame}
-//             alt='before'
-//             className='img-fluid before-frame rounded'
-//           />
-//           <img
-//             src={afterFrame}
-//             alt='after'
-//             className='img-fluid after-frame rounded'
-//           />
-//         </div>
-//         <p className='mt-3 text-center'>
-//           The evolution of the Game of GO app from 2020(first image) to
-//           2021(second image)
-//         </p>
-//       </div>
-//       {/* <div className='mt-3 text-light text-center'></div> */}
-//       <div className='text-center mt-5 work-container rounded shadow'>
-//         <h4 className='pt-3 text-light'>{workDid.heading}</h4>
-//         <div className=''>
-//           <h6 className='my-3 text-light bg-dark p-3'>
-//             {workDid.onBoardingShots.subText}
-//           </h6>
-//           <img
-//             src={workDid.onBoardingShots.first}
-//             alt='first shot'
-//             className='container mb-3'
-//           />
-//           <img
-//             src={workDid.onBoardingShots.second}
-//             alt='second shot'
-//             className='container'
-//           />
-//         </div>
-//         <div className='my-5 text-light d-flex flex-column align-items-center'>
-//           <p className='p-3 bg-dark w-50'>{workDid.instagramShots.subText}</p>
-//           <img
-//             src={workDid.instagramShots.instaShot}
-//             alt='instagram shots'
-//             className='container mb-3'
-//           />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
+import { AiOutlineLine } from "react-icons/ai";
+import { HiCode } from "react-icons/hi";
 
 const aboutGo = {
   heading: "Game of GO",
-  subheading: "Game of GO is a mobile app that was designed on Figma",
+  subheading: `Improve your strategical thinking by playing the ancient game of Go`,
+  aboutCompany:
+    "Game of GO is a mobile app that was designed on Figma. It is available on iOS and Android",
   imgSrc: gameScreenFrame,
 };
+
+const infoRow = [
+  {
+    id: 1,
+    heading: "DATE",
+    info: "August 2020 - present",
+  },
+  {
+    id: 2,
+    heading: "ROLE",
+    info: "UI/UX + Graphic Designer",
+  },
+  {
+    id: 3,
+    heading: "LINKS",
+    info: <a href='https://gameofgo.app/'>Game of Go</a>,
+  },
+];
 
 const moreGoInfo = {
   heading: "About Game of GO",
@@ -173,25 +101,44 @@ const iconography = {
 export default function AboutGame() {
   return (
     <div className='container'>
-      <div className='card mt-4 p-3 justify-content-between'>
-        <h2>{aboutGo.heading}</h2>
-        <h6>{aboutGo.subheading}</h6>
-        <div className='text-center p-3'>
-          <img
-            src={aboutGo.imgSrc}
-            alt='GO game screenshot'
-            className='image-container'
-          />
-        </div>
+      <div className='mt-5 d-flex flex-column'>
+        <h1>{aboutGo.heading}</h1>
+        <h4 className='mt-1'>{aboutGo.subheading}</h4>
+        <h6 className='mt-3'>{aboutGo.aboutCompany}</h6>
       </div>
-      <div className='card mt-4 p-3 justify-content-between'>
-        <h2>{moreGoInfo.heading}</h2>
-        <div className=''>
+      <div className='text-center mt-3' style={{ backgroundColor: "#caf0f8" }}>
+        <img
+          src={aboutGo.imgSrc}
+          alt='Go game screenshot'
+          className='image-container p-2'
+        />
+      </div>
+      <div className='container mt-5'>
+        <ul className='d-flex justify-content-between'>
+          {infoRow.map(({ id, heading, info }) => {
+            return (
+              <li key={id}>
+                <h6 className='text-dark'>{heading}</h6>
+                <AiOutlineLine className='text-success' />
+                <h6>{info}</h6>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+      <div className='mt-5'>
+        <div className='d-flex justify-content-around'>
+          <HiCode className='text-success' size='1.5em' />
+          <h4 className='text-center'>{moreGoInfo.heading}</h4>
+          <HiCode className='text-success' size='1.5em' />
+        </div>
+
+        <div className='mt-4'>
           <h6 className='mb-3'>{moreGoInfo.subheading}</h6>
           <h6 className='mb-3'>{moreGoInfo.moreheading}</h6>
         </div>
 
-        <div className='text-center'>
+        <div className=''>
           <img
             src={moreGoInfo.imgSrc}
             alt='GO game screenshot'
@@ -199,16 +146,21 @@ export default function AboutGame() {
           />
         </div>
       </div>
-      <div className='card mt-4 p-3 justify-content-between'>
-        <h2>{productArchitecture.heading}</h2>
+      <div className='mt-5 p-3 justify-content-between'>
+        <div className='d-flex justify-content-around mb-3'>
+          <HiCode className='text-success' size='1.5em' />
+          <h4>{productArchitecture.heading}</h4>
+          <HiCode className='text-success' size='1.5em' />
+        </div>
         <h6 className='mb-3'>{productArchitecture.subheading}</h6>
-        <div className='text-center'>
+
+        <div className='text-center mt-5'>
           <img
             src={productArchitecture.imgSrc}
             alt='GO game screenshot'
             className='container'
           />
-          <h6 className='mt-3'>{productArchitecture.imageInfo}</h6>
+          <h6 className='mt-2 mb-5'>{productArchitecture.imageInfo}</h6>
         </div>
         <div className='mt-3 text-center'>
           <div className='d-flex justify-content-around'>
@@ -255,14 +207,18 @@ export default function AboutGame() {
           </div>
         </div>
       </div>
-      <div className='card mt-3 p-3'>
-        <h2>{colorScheme.heading}</h2>
-        <h3 className='text-secondary'>{colorScheme.subheading}</h3>
+      <div className='mt-5'>
+        <div className='d-flex justify-content-around mb-5'>
+          <HiCode className='text-success' size='1.5em' />
+          <h4>{colorScheme.heading}</h4>
+          <HiCode className='text-success' size='1.5em' />
+        </div>
+        <h3 className='text-secondary mb-5'>{colorScheme.subheading}</h3>
         <div className='d-flex prod-main-section-container mt-3'>
-          <div className=' col-md-7'>
+          <div className=' col-md-5'>
             <img src={colorTheme} alt='color-themes' className='w-100' />
           </div>
-          <div className='col-md-5 mt-3'>
+          <div className='col-md-7 mt-3'>
             <div>
               <h4>{colorScheme.primaryColor.heading}</h4>
               <h5 className='text-secondary'>
@@ -278,14 +234,18 @@ export default function AboutGame() {
           </div>
         </div>
       </div>
-      <div className='card mt-3 p-3'>
-        <h2>{iconography.heading}</h2>
+      <div className='mt-5'>
+        <div className='d-flex justify-content-around mb-5'>
+          <HiCode className='text-success' size='1.5em' />
+          <h4>{iconography.heading}</h4>
+          <HiCode className='text-success' size='1.5em' />
+        </div>
         <h4 className='text-secondary mt-3'>{iconography.subHeading}</h4>
-        <div className='text-center mt-3'>
+        <div className='mt-3'>
           <img
             src={iconography.imgSrc}
             alt='icons wallpaper'
-            className='container'
+            className='img-fluid'
           />
         </div>
         <h5 className='ml-3 mt-3'>

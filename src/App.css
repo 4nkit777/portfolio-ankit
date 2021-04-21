@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap");
 :root {
   --bg-color: #f8f9fa;
   --nav-color: #e9ecef;
   --text-color-1: #8186ff;
   --text-color-2: #6167f3;
   --text-color-3: #3339c7;
+  --text-color-4: #90e0ef;
   --bg-color-1: #e9edc9;
   --bg-color-2: #ffcdb2;
   --bg-color-3: #6d6875;
@@ -29,9 +31,13 @@ body {
 }
 
 /* typography */
+h1 {
+  font-size: 3.5rem;
+  color: var(--text-color-4);
+}
 
 h2 {
-  font-size: 24px;
+  font-size: 2rem;
   letter-spacing: -3px;
 }
 
@@ -53,9 +59,10 @@ h5 {
 }
 
 h6 {
-  font-size: 0.9rem;
-  letter-spacing: -2px;
-  line-height: 20px;
+  font-size: 0.8rem;
+  letter-spacing: -0.9px;
+  line-height: 1.1rem;
+  color: var(--para-color-1);
 }
 
 p {
@@ -73,7 +80,8 @@ p {
 /* Navigation attributes */
 
 nav {
-  font-family: "Blinker", sans-serif;
+  /* font-family: "Blinker", sans-serif; */
+  font-family: "Ubuntu Mono", monospace;
   color: black;
 }
 
@@ -195,6 +203,13 @@ button > a:hover {
   left: 4%;
   width: 15%;
 } */
+
+/* Main Screen */
+
+.wave-img {
+  width: 30px;
+  height: 30px;
+}
 
 /* Projects Page */
 
@@ -536,6 +551,12 @@ button > a:hover {
   }
 
   .info-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+  }
+
+  .inspire-container {
     display: flex;
     flex-flow: column;
   }

@@ -27,8 +27,9 @@ export const navData = [
   },
   // {
   //   id: 4,
-  //   url: "/aboutgame",
-  //   text: "game",
+  //   url:
+  //     "https://www.linkedin.com/in/ankit-sil/detail/overlay-view/urn:li:fsd_profileTreasuryMedia:(ACoAACc8g1oBZFmE99P5deP_rbkg2DVfjWCDHX8,1614704643155)/",
+  //   text: "resume",
   // },
 ];
 
