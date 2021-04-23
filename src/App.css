@@ -20,6 +20,8 @@
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
+  --custom-margin: 100px;
+
   --main-btn-shadow: 0 4px 40px rgba(99, 131, 246, 0.5);
   --nav-shadow: 0 4px 40px #e9ecef;
 
@@ -77,6 +79,10 @@ p {
   color: white;
 }
 
+.custom-margin {
+  margin-top: var(--custom-margin);
+}
+
 /* Navigation attributes */
 
 nav {
@@ -122,10 +128,10 @@ nav {
 }
 
 .links a {
-  color: var(--text-color-3);
-  font-size: 1.2rem;
+  /* color: var(--text-color-3); */
+  font-size: 1.1rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   display: block;
   padding: 0.5rem 1rem;
   transition: var(--transition);
@@ -217,7 +223,7 @@ button > a:hover {
   /* custom button */
   border-width: 2.5px;
   border-color: black;
-  width: 10rem;
+  /* width: 100%; */
 }
 
 .in-dev-btn {
@@ -283,8 +289,8 @@ button > a:hover {
 }
 
 .newshots-app {
-  width: 80%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
 }
 
 .nasa-shots-container {

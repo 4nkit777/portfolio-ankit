@@ -113,32 +113,32 @@ export default function AboutGame() {
           className='image-container p-2'
         />
       </div>
-      <div className='container mt-5'>
+      <div className='container custom-margin'>
         <ul className='d-flex justify-content-between'>
           {infoRow.map(({ id, heading, info }) => {
             return (
               <li key={id}>
-                <h6 className='text-dark'>{heading}</h6>
+                <h6 className='text-dark m-0'>{heading}</h6>
                 <AiOutlineLine className='text-success' />
-                <h6>{info}</h6>
+                <h6 className='mt-3'>{info}</h6>
               </li>
             );
           })}
         </ul>
       </div>
-      <div className='mt-5'>
+      <div className='custom-margin'>
         <div className='d-flex justify-content-around'>
           <HiCode className='text-success' size='1.5em' />
           <h4 className='text-center'>{moreGoInfo.heading}</h4>
           <HiCode className='text-success' size='1.5em' />
         </div>
 
-        <div className='mt-4'>
+        <div className='mt-5'>
           <h6 className='mb-3'>{moreGoInfo.subheading}</h6>
           <h6 className='mb-3'>{moreGoInfo.moreheading}</h6>
         </div>
 
-        <div className=''>
+        <div className='mt-5'>
           <img
             src={moreGoInfo.imgSrc}
             alt='GO game screenshot'
@@ -146,8 +146,8 @@ export default function AboutGame() {
           />
         </div>
       </div>
-      <div className='mt-5 p-3 justify-content-between'>
-        <div className='d-flex justify-content-around mb-3'>
+      <div className='custom-margin p-3 justify-content-between'>
+        <div className='d-flex justify-content-around mb-5'>
           <HiCode className='text-success' size='1.5em' />
           <h4>{productArchitecture.heading}</h4>
           <HiCode className='text-success' size='1.5em' />
@@ -162,7 +162,7 @@ export default function AboutGame() {
           />
           <h6 className='mt-2 mb-5'>{productArchitecture.imageInfo}</h6>
         </div>
-        <div className='mt-3 text-center'>
+        <div className='custom-margin text-center'>
           <div className='d-flex justify-content-around'>
             <img
               src={productArchitecture.oldProductSection.beforeImg}
@@ -175,11 +175,11 @@ export default function AboutGame() {
               className='after-frame '
             />
           </div>
-          <h6 className='mt-3'>
+          <h6 className='mt-2'>
             {productArchitecture.oldProductSection.imageInfo}
           </h6>
         </div>
-        <div className='mt-3 d-flex justify-content-around prod-main-section-container'>
+        <div className='mt-5 d-flex justify-content-around prod-main-section-container'>
           <div className='p-3'>
             <h3>{productArchitecture.mainSection.heading}</h3>
             <h4 className='mt-4 text-secondary'>
@@ -207,7 +207,7 @@ export default function AboutGame() {
           </div>
         </div>
       </div>
-      <div className='mt-5'>
+      <div className='custom-margin'>
         <div className='d-flex justify-content-around mb-5'>
           <HiCode className='text-success' size='1.5em' />
           <h4>{colorScheme.heading}</h4>
@@ -234,14 +234,14 @@ export default function AboutGame() {
           </div>
         </div>
       </div>
-      <div className='mt-5'>
+      <div className='custom-margin'>
         <div className='d-flex justify-content-around mb-5'>
           <HiCode className='text-success' size='1.5em' />
           <h4>{iconography.heading}</h4>
           <HiCode className='text-success' size='1.5em' />
         </div>
         <h4 className='text-secondary mt-3'>{iconography.subHeading}</h4>
-        <div className='mt-3'>
+        <div className='mt-5'>
           <img
             src={iconography.imgSrc}
             alt='icons wallpaper'

@@ -38,7 +38,7 @@ const About = () => {
           />
         </div>
       </div>
-      <div className='d-flex flex-column my-5 card'>
+      <div className='d-flex flex-column my-5'>
         <div className='p-3'>
           <div className=''>
             <FaQuoteLeft />
@@ -68,9 +68,9 @@ const About = () => {
               <br />
               <br />- Ankit :)
             </h6>
-            <div>
+            <div className='mt-5'>
               <button
-                className='container btn btn-light rounded border border-dark'
+                className='container btn btn-light rounded border border-2 border-dark'
                 onClick={() =>
                   (window.location.href = "mailto:ankit.sil@outlook.com")
                 }
@@ -84,11 +84,11 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className='container mt-3 card p-3'>
+      <div className='container my-5 p-3'>
         <div className='text-center mb-5'>
           <h2>Here are some things that inspires me.</h2>
         </div>
-        <div className='d-flex justify-content-between inspire-container mw-100'>
+        <div className='d-flex justify-content-between inspire-container mw-100 mt-5'>
           <div className='col-md-4'>
             <ReactPlayer
               url='https://www.youtube.com/watch?v=vN4U5FqrOdQ'

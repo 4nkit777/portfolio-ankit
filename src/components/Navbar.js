@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../nav-style.css";
 import { navData } from "../data";
 import { FaBars } from "react-icons/fa";
+import ankitLogo from "../assets/ankit-brand-icon.png";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -25,7 +26,7 @@ const Navbar = () => {
         <div className='nav-header'>
           <div className='navbar-brand'>
             <Link to='/' className='brand-name'>
-              Ankit
+              <img src={ankitLogo} alt='brand logo' />
             </Link>
           </div>
           <button

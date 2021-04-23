@@ -39,21 +39,21 @@ export const socialIcons = [
     text: "linkedIn",
     url: "https://www.linkedin.com/in/ankit-sil",
     classDeno: "w-50 h-50 faHoverColor",
-    icon: <FaLinkedin />,
+    icon: <FaLinkedin size='1.5rem' />,
   },
   {
     id: 2,
     text: "facebook",
     url: "https://www.facebook.com",
     classDeno: "w-50 h-50 faHoverColor",
-    icon: <FaFacebook />,
+    icon: <FaFacebook size='1.5rem' />,
   },
   {
     id: 3,
     text: "dribbble",
     url: "https://dribbble.com/AnkitSil",
     classDeno: "w-50 h-50 faHoverColor",
-    icon: <FaDribbbleSquare />,
+    icon: <FaDribbbleSquare size='1.5rem' />,
   },
 ];
 

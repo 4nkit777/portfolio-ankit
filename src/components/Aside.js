@@ -4,8 +4,8 @@ import { socialIcons } from "../data";
 
 const Aside = () => {
   return (
-    <div className='d-flex flex-column vh-100 col-md-2 col-2 justify-content-around align-items-center'>
-      <div className='d-flex flex-column'>
+    <div className='d-flex flex-column vh-100 col-md-2 col-2 justify-content-around '>
+      <div className='d-flex flex-column vh-75'>
         {socialIcons.map(({ id, text, url, classDeno, icon }) => {
           return (
             <button
