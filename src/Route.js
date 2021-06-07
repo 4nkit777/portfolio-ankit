@@ -8,6 +8,7 @@ import Skills from "./pages/Skills";
 import App from "./App";
 import AboutGame from "./pages/subpages/AboutGame";
 import Loading from "./components/Loading";
+import Trakr from "./pages/subpages/Trakr";
 // import Error from "./pages/Error";
 
 const RouteApp = () => {
@@ -33,6 +34,7 @@ const RouteApp = () => {
             <Route path='/skills' component={Skills} />
           </Switch>
           <Route exact path='/aboutgame' component={AboutGame} />
+          <Route path='/trakr' component={Trakr} />
         </Router>
       )}
     </div>

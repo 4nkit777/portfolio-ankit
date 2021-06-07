@@ -9,6 +9,9 @@ import newshotsApp from "../assets/newshots-prototype.png";
 import nasaBg from "../assets/nasa-shot.png";
 import moonIcon from "../assets/moon-icon.png";
 
+import projectIcon from "../assets/analytics.png";
+import projectTrakr from "../assets/trakrOne.png";
+
 const projectData = [
   {
     id: 1,
@@ -49,6 +52,17 @@ const sideProjects = [
     heroImage: nasaBg,
     background: "#f8edeb",
     linkSrc: "https://nasa-app-mdn.netlify.app/",
+  },
+  {
+    id: 2,
+    iconSrc: projectIcon,
+    headingOne: "Trakr - Fitness Tracker app",
+    headingTwo: "A project I did for a US based client",
+    heroText: "This project was created on Adobe XD during my freelancing days",
+    buttonText: "Check it out!",
+    heroImage: "",
+    background: "#B4F8C8",
+    linkSrc: "/trakr",
   },
 ];
 
